@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #2c3e50;
+  background-color: #f9f9f9;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+  color: white;
+  text-align: center;
+  padding: 5rem 0 4rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+.profil-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profil-img:hover {
+  transform: scale(1.05);
+}
+
+/* About section */
+.about {
+  padding: 5rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #16a085;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: #16a085;
+  margin: 0.5rem auto;
+}
+
+/* Projects section */
+.project {
+  padding: 5rem 2rem;
+  background-color: #e8f6f3;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(22, 160, 133, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(22, 160, 133, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  color: #16a085;
+  margin-bottom: 1rem;
+}
+
+/* Contact section */
+.contact {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+  text-align: center;
+  position: relative;
+}
+
+.contact .section-title {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+}
+
+.contact .section-title::after {
+  display: none;
+}
+
+.social-icons {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background-color: white;
+  color: #16a085;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.contact-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+  background-color: #16a085;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+footer p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .profil-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .contact .section-title {
+    font-size: 1.8rem;
+    padding: 8px 20px;
+  }
+
+  .social-icons {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .social-icons a {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .contact-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+}
